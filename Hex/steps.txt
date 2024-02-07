@@ -1,0 +1,4 @@
+_____________Day 1 of project 7/2/2024_______________________________________
+For this project since it s my first I started with understanding how to use
+git and github since it will be helpful when coding the game and for future
+projects
