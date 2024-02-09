@@ -5,4 +5,8 @@ projects.
 after learning how to setup the git and link it to github it s time to learn
 advanced java but that s for another day
 _____________________________________________________________________________
-
+_____________Day " of project 9/2/2024_______________________________________
+Starting with a breaf descreption of the priject in general in the main.java
+file and started with learning java GUI and implementing the User Interface
+of the game. and the deferent compenets of the game such as the tokens
+and the beard.
