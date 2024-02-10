@@ -1,7 +1,7 @@
 package HexSC;
 
-import HexSC.src.Gui;
-
+import HexSC.src.board;
+import HexSC.src.Token.Color;
 /*
  * The Hex game (https://en.wikipedia.org/wiki/Hex_(board_game)) is a simple board game 
  * that has two players, each with theoretically infinite tokens of either white or black.
@@ -17,10 +17,12 @@ import HexSC.src.Gui;
  */
 public class Main {
     public static void main(String[] args) {
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                Gui.createAndShowGUI();
-            }
-        });
+        board b = new board(11);
+        for(int i=0;i<11;i++) {
+        	int[] k = new  int[2];
+        	k[0]=0;
+        	k[1]=10-i;
+        	b.check_place(k,Color.BLACK);
+        }
     }
 }

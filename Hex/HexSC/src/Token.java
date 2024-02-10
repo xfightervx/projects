@@ -6,14 +6,16 @@ package HexSC.src;
  * Error handling is omitted since tokens are created when placed on the board.
  */
 public class Token {
-    enum Color {
+    public enum Color {
         BLACK,      // First player's color
         WHITE,      // Second player's color
         FAINT_BLACK,// Temporary token used for hovering over slots
-        FAINT_WHITE
+        FAINT_WHITE,
+        Empty
     }
 
     public Color color; // Token's color
+    public boolean passed=false;
 
     /**
      * Initializes token with given color and position.

@@ -23,6 +23,11 @@ public class board {
 	public board(int size) {
 		this.size=size;
 		this.board=new slot[size][size];
+		for(int i=0;i<size;i++) {
+			for(int j=0;j<size;j++) {
+				this.board[i][j]=new slot();
+			}
+		}
 		end.get_size(size);
 	}
 	/**
@@ -42,8 +47,8 @@ public class board {
 		this.board[pos[0]][pos[1]].order = slot.number_of_moves+1;
 		slot.number_of_moves+=1;
 		end.pos_increase(c, pos);
-		if(slot.number_of_moves>=size*2-1) {
-			check_end_game(c);
+		if(slot.number_of_moves>=size-1) {
+			check_end_game(pos,c);
 		}
 		return pos;
 	}
@@ -55,8 +60,10 @@ public class board {
 			place_token(pos, c);
 		}
 	}
-	public boolean check_end_game(Color c) {
-		return end.end_game(this.board,c);
+	public boolean check_end_game(int[] pos,Color c) {
+		boolean a= end.end_game(this.board,c,pos);
+		System.out.println(a);
+		return a;
 	}
 	public void cuncel_move() {
 		if(slot.number_of_moves!=0) {

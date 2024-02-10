@@ -5,7 +5,7 @@ projects.
 after learning how to setup the git and link it to github it s time to learn
 advanced java but that s for another day
 _____________________________________________________________________________
-_____________Day " of project 9/2/2024_______________________________________
+_____________Day 2 of project 9/2/2024_______________________________________
 Starting with a breaf descreption of the priject in general in the main.java
 file and started with learning java GUI Swing logical and implementing some
 of the logical part of the game such as and the deferent compenets 
@@ -13,3 +13,7 @@ of the game such as the tokens and the beard.
 implement some of the logic of end game without comment for just now to be
 finished later.
 _____________________________________________________________________________
+_____________Day 3 of project 10/0/2024______________________________________
+finishing the logic of the game and advancing more in Gui;
+after 3 h of coding and debugging syntax and outof bound errors i have
+logical ones that i can t find the source of it for now
