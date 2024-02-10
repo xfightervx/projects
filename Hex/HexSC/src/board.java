@@ -1,5 +1,4 @@
 package HexSC.src;
-
 import HexSC.src.Token.Color;
 
 /*
@@ -47,24 +46,42 @@ public class board {
 		this.board[pos[0]][pos[1]].order = slot.number_of_moves+1;
 		slot.number_of_moves+=1;
 		end.pos_increase(c, pos);
-		if(slot.number_of_moves>=size-1) {
+		if(slot.number_of_moves>=size) {
 			check_end_game(pos,c);
 		}
 		return pos;
 	}
-	/*
-	 * 
+	/**
+	 *check if slot is empty then invoke the place_token
+	 *@param are the same as last methode
 	 */
 	public void check_place(int[] pos,Color c) {
 		if(this.board[pos[0]][pos[1]].is_empty()) {
 			place_token(pos, c);
 		}
 	}
+	/**
+	 * a method that invoke end.end_game since it take much time and need 
+	 * more details in implanting the method
+	 * @param pos the position of the last placed token 
+	 * @param c the color of the last placed token since it easier that return
+	 * the token to identify the player
+	 * @return a boolean value that turn out true if the game is finished and we 
+	 * have a winner
+	 */
 	public boolean check_end_game(int[] pos,Color c) {
 		boolean a= end.end_game(this.board,c,pos);
 		System.out.println(a);
 		return a;
+		
+
 	}
+	/**
+	 * a method that cancel all effect of the last placement of token if there 
+	 * has been any. by iterating over the board and looking for the slot that
+	 * have the number matching the number of token placed
+	 * and breaking out the nested loop ; 
+	 */
 	public void cuncel_move() {
 		if(slot.number_of_moves!=0) {
 			outerloop:

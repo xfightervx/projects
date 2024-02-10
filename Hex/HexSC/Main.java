@@ -1,6 +1,8 @@
 package HexSC;
 
 import HexSC.src.board;
+
+
 import HexSC.src.Token.Color;
 /*
  * The Hex game (https://en.wikipedia.org/wiki/Hex_(board_game)) is a simple board game 
@@ -17,11 +19,11 @@ import HexSC.src.Token.Color;
  */
 public class Main {
     public static void main(String[] args) {
-        board b = new board(11);
-        for(int i=0;i<11;i++) {
-        	int[] k = new  int[2];
-        	k[0]=0;
-        	k[1]=10-i;
+        board b = new board(5);
+        int[] k = new  int[2];
+        for(int i=0;i<5;i++) {
+        	k[0]=2;
+        	k[1]=i;
         	b.check_place(k,Color.BLACK);
         }
     }

@@ -11,7 +11,7 @@ public class Token {
         WHITE,      // Second player's color
         FAINT_BLACK,// Temporary token used for hovering over slots
         FAINT_WHITE,
-        Empty
+        Empty//Color use for empty string
     }
 
     public Color color; // Token's color
