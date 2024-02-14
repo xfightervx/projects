@@ -1,22 +1,21 @@
 package HexSC.src;
-/*
- * this file is dedicated to creating the Gui of the game in general using swing
- */
-import javax.swing.*;
-	
-public class Gui{
-	public static void createAndShowGUI() {
-        //Create and set up the window.
-        JFrame frame = new JFrame("HelloWorldSwing");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //Add the ubiquitous "Hello World" label.
-        JLabel label = new JLabel("Hello World");
-        frame.getContentPane().add(label);
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-        //Display the window.
-        frame.pack();
-        frame.setVisible(true);
-    }
-	
+public class Gui extends Application {
+	@Override
+	public void start(Stage stage) throws Exception{
+		Group root = new Group();
+		Scene scene = new Scene(root, 600,600);
+		stage.setTitle("test");
+		stage.setScene(scene);
+		stage.show();
+		
+	}
+	public void create_GUI(String args[]) {
+		launch(args);
+	}
 }

@@ -1,7 +1,4 @@
-package HexSC;
-
-import HexSC.src.board;
-
+package HexSC.src;
 
 import HexSC.src.Token.Color;
 /*
@@ -17,14 +14,10 @@ import HexSC.src.Token.Color;
  * of an AI or algorithm that can never be beaten given the first move. Creating such a bot 
  * is the objective of the second part of the project.
  */
+
 public class Main {
     public static void main(String[] args) {
-        board b = new board(5);
-        int[] k = new  int[2];
-        for(int i=0;i<5;i++) {
-        	k[0]=2;
-        	k[1]=i;
-        	b.check_place(k,Color.BLACK);
-        }
+        Gui gui = new Gui();
+        gui.create_GUI(args);
     }
 }

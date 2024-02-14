@@ -16,4 +16,5 @@ _____________________________________________________________________________
 _____________Day 3 of project 10/0/2024______________________________________
 finishing the logic of the game and advancing more in Gui;
 after 6h the logical part of the code is working but not improvement in 
-Gui part
+Gui part.
+trying to switch to JavaFx since it have better event handling and css
